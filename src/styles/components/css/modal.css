@@ -1,0 +1,197 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  width: 60%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modal-content .close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000000;
+  transition: color 0.3s;
+}
+.modal-content .close:hover {
+  color: black;
+}
+.modal-content .modal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 16px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+}
+.modal-content .modal-header .modal-image {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal-content .modal-header .modal-info {
+  margin-left: 40%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.modal-content .modal-header .modal-info .modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+}
+.modal-content .modal-header .modal-info .modal-price {
+  font-size: 1.2rem;
+  color: #000000;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.modal-content .modal-header .modal-info .quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 8px;
+  gap: 8px;
+}
+.modal-content .modal-header .modal-info .quantity-control .quantity-btn {
+  background: #d3d3d3;
+  color: #000000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.modal-content .modal-header .modal-info .quantity-control .quantity-btn:hover {
+  background: #e6e6e6;
+}
+.modal-content .modal-header .modal-info .quantity-control .quantity-btn:active {
+  transform: scale(0.95);
+}
+.modal-content .modal-header .modal-info .quantity-control .quantity {
+  font-size: 1.25rem;
+  color: #000000;
+  margin: 0 1rem;
+}
+.modal-content .modal-header .modal-info .attribute-list {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "inter";
+  font-weight: 400;
+  color: #8d8d8d;
+  margin-top: 20px;
+  margin-left: -25px;
+}
+.modal-content .modal-body {
+  padding: 16px;
+  font-size: 0.9rem;
+  color: #000000;
+  overflow: auto;
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    width: 80%;
+    max-width: 358px;
+    height: 211px;
+    flex-direction: column;
+  }
+  .modal-content .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal-content .modal-header .modal-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  .modal-content .modal-header .modal-info {
+    margin-left: 0;
+    margin-top: 8px;
+    padding: 16px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal-content .modal-header .modal-info .modal-title {
+    font-size: 1.1rem;
+  }
+  .modal-content .modal-header .modal-info .modal-price {
+    font-size: 1rem;
+  }
+  .modal-content .modal-header .modal-info .quantity-control {
+    margin-top: 8px;
+  }
+  .modal-content .modal-header .modal-info .quantity-control .quantity-btn {
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 100%;
+    height: auto;
+  }
+  .modal-content .modal-header .modal-image {
+    width: 35%;
+  }
+  .modal-content .modal-header .modal-info {
+    margin-left: 35%;
+  }
+  .modal-content .modal-header .attribute-list {
+    margin-left: -25px;
+  }
+}
+@media (max-width: 992px) {
+  .modal-content {
+    max-width: 100%;
+    height: auto;
+  }
+  .modal-content .modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+  }
+  .modal-content .modal-price {
+    font-size: 0.9rem;
+    color: #000000;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+  .modal-content .attribute-list {
+    font-size: 10px;
+    line-height: 14px;
+    font-family: "inter";
+    font-weight: 400;
+    color: #8d8d8d;
+  }
+}/*# sourceMappingURL=modal.css.map */

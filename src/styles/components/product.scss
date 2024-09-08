@@ -1,0 +1,48 @@
+.sidebar {
+  padding: 20px 0 50px 20px;
+
+    h1{
+        color: #1f1f1f;
+        font-size: 1.3rem   ;
+    }
+.menu-items{
+    padding: 20px 60px 20px 0px;
+    @include media('sm') { 
+      padding: 0 ;
+
+    }
+
+  .category-section {
+    margin-bottom: 2rem;
+
+    .category-name {
+      font-size: 1rem;
+      line-height: 20px;
+      font-weight: 600;
+      color: #1f1f1f;
+      margin-bottom: 1rem;
+    }
+
+    .items-list {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr); 
+
+      @include media('xl') { 
+        grid-template-columns: repeat(5, 1fr); 
+      }
+      @include media('lg') { 
+        grid-template-columns: repeat(4, 1fr); 
+      }
+      @include media('md') { 
+        grid-template-columns: repeat(3, 1fr); 
+      }
+      @include media('sm') { 
+        padding: 10px ;
+
+        grid-template-columns: repeat(2, 1fr); 
+      }
+    }
+    
+  }
+}
+}
